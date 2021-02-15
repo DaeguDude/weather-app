@@ -11,6 +11,15 @@ li {
   list-style: none;
 }
 
+input:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
 /******************
 Custom Setup
 *******************/
@@ -18,6 +27,10 @@ Custom Setup
 :root {
   --main-bg-color: #1b1e25;
   --main-orange-color: #ff8c00;
+}
+
+::placeholder {
+  color: #626262;
 }
 
 /******************
@@ -32,9 +45,10 @@ body {
 }
 
 body > header {
-  height: 50px;
-  border: 1px solid white;
-  margin-bottom: 36px;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
 }
 
 body > header h1 {
@@ -52,10 +66,32 @@ section {
   flex-direction: column;
 }
 
-section header {
-  border: 1px solid white;
+.search-box {
   height: 44px;
   margin-bottom: 24px;
+
+  display: flex;
+}
+
+.search-box div {
+  width: 70%;
+  margin-right: 15px;
+  border-bottom: 2px solid #bdbdbd;
+}
+
+.search-box input[name="search-city"] {
+  width: 100%;
+  height: 44px;
+  background: none;
+  border: none;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.search-city-btn {
+  height: 44px;
+  width: 65px;
+  background: var(--main-orange-color);
 }
 
 .convert-switch {

@@ -1,0 +1,82 @@
+/******************
+Basic Reset
+*******************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+/******************
+Custom Setup
+*******************/
+
+:root {
+  --main-bg-color: #1b1e25;
+  --main-orange-color: #ff8c00;
+}
+
+/******************
+Main Styling
+*******************/
+
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background: var(--main-bg-color);
+  padding: 35px 30px;
+}
+
+body > header {
+  height: 50px;
+  border: 1px solid white;
+  margin-bottom: 36px;
+}
+
+body > header h1 {
+  color: #fff;
+  font-size: 35px;
+}
+
+section {
+  height: 80%;
+  width: 100%;
+  border: 1px solid white;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+section header {
+  border: 1px solid white;
+  height: 44px;
+  margin-bottom: 24px;
+}
+
+.convert-switch {
+  border:1px solid white;
+  width: 60px;
+  height: 30px;
+  align-self: flex-end;
+}
+
+section main {
+  margin-top: 20px;
+  border: 1px solid white;
+  flex: 1 0 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.city {
+  width: 208px;
+  height: 270px;
+  border: 1px solid white;
+}
+

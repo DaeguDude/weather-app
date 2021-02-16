@@ -37,6 +37,11 @@ button {
   color: #626262;
 }
 
+button:active {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+
 /*
   ========================================
   Main Styling
@@ -180,9 +185,82 @@ section main {
   justify-content: center;
 }
 
+/*
+  ========================================
+  City Weather 
+  ========================================
+*/
+
 .city {
-  width: 208px;
-  height: 270px;
-  border: 1px solid white;
+  position: relative;
+  background: #fff;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;  
 }
+
+.city__title {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  color: #53627c;
+}
+
+.city__country {
+  background: var(--main-orange-color);
+  font-size: 0.75rem;
+  padding: 0 3px;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+.city__degree {
+  position: relative;
+  font-weight: bold;
+}
+
+.degree {
+  font-size: 3rem;
+}
+
+.unit {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+}
+
+.city__icon {
+  font-size: 73px;
+}
+
+.city__info {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #53627c;
+}
+
+.city__close {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 20px;
+  width: 20px;
+  background: #d0d0d0;
+  color: #53627c;
+  border-radius: 50%;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-times {
+  font-size: 0.75rem;
+}
+
 

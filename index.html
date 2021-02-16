@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/fadac8530c.js"
+      crossorigin="anonymous"
+    ></script>
     <title>🌂Weather App</title>
   </head>
   <body>
@@ -25,9 +29,16 @@
             placeholder="Enter your location"
           />
         </div>
-        <button class="search-city-btn"></button>
+        <button class="search-city-btn">
+          <i class="fas fa-search"></i>
+        </button>
       </header>
-      <div class="convert-switch"></div>
+      <div class="convert-switch">
+        <label class="switch">
+          <input type="checkbox" checked />
+          <span class="slider round"></span>
+        </label>
+      </div>
       <main>
         <ul class="cities">
           <li class="city"></li>

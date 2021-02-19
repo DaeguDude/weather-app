@@ -79,7 +79,7 @@ section {
   display: flex;
 }
 
-.search-box div {
+.search-box form {
   width: 70%;
   margin-right: 15px;
 }

@@ -1,12 +1,4 @@
-const weatherInfo = {
-  name: "New York",
-  country: "US",
-  temperature: 5,
-  icon: "snow",
-  description: "clear sky",
-};
-
-function makeCity(weatherInfo) {
+function showCity(weatherInfo) {
   const { name, country, temperature, icon, description } = weatherInfo;
 
   return document.createRange().createContextualFragment(`
@@ -19,9 +11,11 @@ function makeCity(weatherInfo) {
         <span class="degree">${temperature}</span>
         <sup class="unit">°C</span>
       </div>
-      <i class="city__icon fas fa-snowflake"></i>
+      <img class="city__icon" src="http://openweathermap.org/img/wn/${icon}@2x.png">
       <span class="city__info">${description}</span>
       <button class="city__close"><i class="fas fa-times"></i></button>
     </li>
   `);
 }
+
+export default showCity;

@@ -239,6 +239,7 @@ section main {
   margin-top: 1rem;
   font-size: 1.25rem;
   font-weight: 600;
+  text-transform: uppercase;
   color: #53627c;
 }
 

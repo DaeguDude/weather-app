@@ -178,7 +178,6 @@ input:checked + .slider:before {
 
 section main {
   margin-top: 20px;
-  border: 1px solid white;
   flex: 1 0 0;
 
   display: flex;
@@ -200,9 +199,10 @@ section main {
   flex-direction: column;
   align-items: center;
   padding: 2rem 3rem;  
+  margin-bottom: 1.5rem;
 }
 
-.city__title {
+.city__name {
   align-self: flex-start;
   font-size: 1.5rem;
   color: #53627c;
@@ -216,7 +216,7 @@ section main {
   border-radius: 1rem;
 }
 
-.city__degree {
+.city__weather {
   position: relative;
   font-weight: bold;
 }

@@ -17,47 +17,48 @@
     <title>🌂Weather App</title>
   </head>
   <body>
-    <header>
-      <h1>WEATHER APP</h1>
-    </header>
-    <section>
-      <header class="search-box">
-        <form>
-          <input
-            type="text"
-            name="search-city"
-            placeholder="Enter your location"
-          />
-          <button type="submit" class="search-city-btn">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
+    <div class="container">
+      <header class="header">
+        <h1>WEATHER APP</h1>
       </header>
-      <div class="convert-switch">
-        <label class="switch">
-          <input type="checkbox" checked />
-          <span class="slider round"></span>
-        </label>
-      </div>
-      <main>
-        <ul class="cities">
-          <li class="city">
-            <span class="city__name"
-              >New York <sup class="city__country">KR</sup></span
-            >
-
-            <div class="city__weather">
-              <span class="degree">5</span>
-              <sup class="unit">°C</span>
-            </div>
-            <!-- <img class="city__icon" src="" /> -->
-            <i class="city__icon fas fa-snowflake"></i>
-            <span class="city__info">CLEAR SKY</span>
-            <button class="city__close"><i class="fas fa-times"></i></button>
-          </li>
-        </ul>
-      </main>
-    </section>
+      <section class="weather">
+        <header class="search-box">
+          <form>
+            <input
+              type="text"
+              name="search-city"
+              placeholder="Enter your location"
+            />
+            <button type="submit" class="search-city-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </header>
+        <div class="convert-switch">
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <main>
+          <ul class="cities">
+            <li class="city">
+              <span class="city__name"
+                >New York <sup class="city__country">KR</sup></span
+              >
+              <div class="city__weather">
+                <span class="degree">5</span>
+                <sup class="unit">°C</span>
+              </div>
+              <!-- <img class="city__icon" src="" /> -->
+              <i class="city__icon fas fa-snowflake"></i>
+              <span class="city__info">CLEAR SKY</span>
+              <button class="city__close"><i class="fas fa-times"></i></button>
+            </li>
+          </ul>
+        </main>
+      </section>
+    </div>
 
     <script src="main.js"></script>
   </body>

@@ -182,12 +182,15 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/*
+  ========================================
+  main
+  ========================================
+*/
+
 section main {
   margin-top: 20px;
   flex: 1 0 0;
-
-  display: flex;
-  justify-content: center;
 }
 
 /*
@@ -195,6 +198,11 @@ section main {
   City Weather 
   ========================================
 */
+
+.cities {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .city {
   position: relative;
@@ -205,6 +213,7 @@ section main {
   flex-direction: column;
   align-items: center;
   padding: 2rem 3rem;  
+  margin-right: 1.5rem;
   margin-bottom: 1.5rem;
 }
 

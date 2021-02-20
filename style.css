@@ -49,25 +49,30 @@ button:active {
 */
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   background: var(--main-bg-color);
-  padding: 2rem 1.8rem;
+  padding: 2.5rem 0;
 }
 
-body > header {
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
   margin-bottom: 1rem;
 
   display: flex;
   align-items: center;
 }
 
-body > header h1 {
+.header h1 {
   color: #fff;
   font-size: 2rem;
 }
 
-section {
+.weather {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -76,16 +81,15 @@ section {
 
 .search-box {
   margin-bottom: 24px;
-  display: flex;
+  max-width: 600px;
 }
 
 .search-box form {
-  width: 70%;
-  margin-right: 15px;
+  display: flex;
 }
 
 .search-box input[name="search-city"] {
-  width: 100%;
+  width: 70%;
   height: 44px;
   background: none;
   border: none;
@@ -93,12 +97,14 @@ section {
   font-size: 23px;
   font-weight: 500;
   color: #fff;
+  margin-right: 15px;
 }
 
 .search-city-btn {
   height: 44px;
   width: 65px;
   background: var(--main-orange-color);
+  border-radius: 5px;
 }
 
 .fa-search {

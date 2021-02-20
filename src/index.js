@@ -12,7 +12,7 @@ searchCityBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const cityToFind = getUserInput();
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${cityToFind}&appid=962edb7f9ab1add3416718398c95a830`
+    `http://api.openweathermap.org/data/2.5/weather?q=${cityToFind}&units=metric&appid=962edb7f9ab1add3416718398c95a830`
   )
     .then(checkStatus)
     .then(getWeatherJson)

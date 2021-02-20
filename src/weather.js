@@ -1,9 +1,7 @@
 function checkStatus(response) {
   if (response.ok) {
-    console.log("okay");
     return Promise.resolve(response);
   } else {
-    console.log("not okay");
     return Promise.reject(new Error("City Not Found"));
   }
 }

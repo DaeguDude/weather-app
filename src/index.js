@@ -1,4 +1,4 @@
-import "../style.css";
+import "./style.css";
 import { checkStatus, getWeatherJson, getPrimaryWeatherInfo } from "./weather";
 import City from "./city";
 import Error from "./error";

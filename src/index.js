@@ -15,8 +15,9 @@ const searchCityBtn = document.querySelector(".search-city-btn");
 searchCityBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const cityToFind = getUserInput();
+  const unit = tempUnit.getCheckedUnit();
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${cityToFind}&units=${tempUnit.getCheckedUnit()}&appid=962edb7f9ab1add3416718398c95a830`
+    `http://api.openweathermap.org/data/2.5/weather?q=${cityToFind}&units=${unit}&appid=962edb7f9ab1add3416718398c95a830`
   )
     .then(checkStatus)
     .then(getWeatherJson)
@@ -25,7 +26,7 @@ searchCityBtn.addEventListener("click", (e) => {
       const cities = document.querySelector(".cities");
       const city = new City(primaryInfo);
 
-      cities.appendChild(city.render());
+      cities.appendChild(city.render(unit));
       error.hide();
       resetSearchInput();
     })

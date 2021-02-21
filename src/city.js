@@ -11,7 +11,7 @@ export default class City {
     this.deleteHandler = this.deleteHandler.bind(this);
   }
 
-  render() {
+  render(tempUnit) {
     const result = document.createRange().createContextualFragment(`
       <li class="city">
         <span class="city__name"
@@ -20,9 +20,11 @@ export default class City {
 
         <div class="city__weather">
           <span class="degree">${this.temperature}</span>
-          <sup class="unit">°C</span>
+          <sup class="unit">°${tempUnit === "metric" ? "C" : "F"}</span>
         </div>
-        <img class="city__icon" src="http://openweathermap.org/img/wn/${this.icon}@2x.png">
+        <img class="city__icon" src="http://openweathermap.org/img/wn/${
+          this.icon
+        }@2x.png">
         <span class="city__info">${this.description}</span>
         <button class="city__close"><i class="fas fa-times"></i></button>
       </li>

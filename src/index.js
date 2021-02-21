@@ -1,6 +1,6 @@
 import "../style.css";
 import { checkStatus, getWeatherJson, getPrimaryWeatherInfo } from "./weather";
-import showCity from "./showCity";
+import City from "./city";
 import Error from "./error";
 import { resetSearchInput, getUserInput } from "./helper";
 
@@ -19,7 +19,9 @@ searchCityBtn.addEventListener("click", (e) => {
     .then(getPrimaryWeatherInfo)
     .then((primaryInfo) => {
       const cities = document.querySelector(".cities");
-      cities.appendChild(showCity(primaryInfo));
+      const city = new City(primaryInfo);
+
+      cities.appendChild(city.render());
       error.hide();
       resetSearchInput();
     })

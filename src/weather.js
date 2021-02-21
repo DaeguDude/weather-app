@@ -11,7 +11,6 @@ function getWeatherJson(response) {
 }
 
 function getPrimaryWeatherInfo(weatherJson) {
-  debugger;
   const name = weatherJson.name;
   const country = weatherJson.sys.country;
   const temperature = Math.trunc(weatherJson.main.temp);

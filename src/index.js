@@ -1,12 +1,12 @@
 import "../style.css";
 import { checkStatus, getWeatherJson, getPrimaryWeatherInfo } from "./weather";
 import showCity from "./showCity";
+import Error from "./error";
+import { resetSearchInput, getUserInput } from "./helper";
+
+const error = new Error();
 
 const searchCityBtn = document.querySelector(".search-city-btn");
-
-function getUserInput() {
-  return document.querySelector('input[name="search-city"]').value;
-}
 
 searchCityBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -20,8 +20,10 @@ searchCityBtn.addEventListener("click", (e) => {
     .then((primaryInfo) => {
       const cities = document.querySelector(".cities");
       cities.appendChild(showCity(primaryInfo));
+      error.hide();
+      resetSearchInput();
     })
     .catch(function (err) {
-      console.log(err);
+      error.show();
     });
 });

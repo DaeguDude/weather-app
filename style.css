@@ -112,6 +112,16 @@ body {
   color: #fff;
 }
 
+.error {
+  display: none;
+  margin-top: 1rem;
+  color: #f14444;
+}
+
+.error--active {
+  display: block;
+}
+
 /*
   ========================================
   Slider
@@ -209,6 +219,7 @@ section main {
   background: #fff;
   border-radius: 1rem;
 
+  min-width: 270px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,7 +258,7 @@ section main {
 }
 
 .city__icon {
-  font-size: 73px;
+  
 }
 
 .city__info {

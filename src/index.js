@@ -14,7 +14,6 @@ const searchCityBtn = document.querySelector(".search-city-btn");
 
 searchCityBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(tempUnit.getCheckedUnit());
   const cityToFind = getUserInput();
   fetch(
     `http://api.openweathermap.org/data/2.5/weather?q=${cityToFind}&units=${tempUnit.getCheckedUnit()}&appid=962edb7f9ab1add3416718398c95a830`

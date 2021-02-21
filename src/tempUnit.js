@@ -25,7 +25,6 @@ export default class TempUnit {
   changeDisplayToImperial() {
     document.querySelectorAll(".degree").forEach((degree) => {
       const metric = Number(degree.innerText);
-      console.log(metric);
       degree.innerText = this.convertToImperial(metric);
 
       document.querySelectorAll(".unit").forEach((unit) => {
@@ -62,7 +61,4 @@ export default class TempUnit {
 
     return "imperial";
   }
-
-  // 만약에 input이 체크가 안 되어있다면... metric
-  // 만약에 input이 체크가 되어 있다면 ... fahrenheit
 }

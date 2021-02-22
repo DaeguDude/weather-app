@@ -44,6 +44,8 @@ Normally it would open automatically, but if it doesn't, click [http://localhost
 
 - Converting between Celsisus and Fahrenheit outputs different temperature result
 
+You can find a list of bugs or development process [here](https://www.notion.so/a7386c292e7f4cee9875099ce37adebe?v=187dcea1f57d4a108caab577a2d0d966)
+
 ## 📩 Contact
 
 k3hppk@gmail.com

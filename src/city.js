@@ -22,7 +22,7 @@ export default class City {
           <span class="degree">${this.temperature}</span>
           <sup class="unit">°${tempUnit === "metric" ? "C" : "F"}</span>
         </div>
-        <img class="city__icon" src="http://openweathermap.org/img/wn/${
+        <img class="city__icon" src="https://openweathermap.org/img/wn/${
           this.icon
         }@2x.png">
         <span class="city__info">${this.description}</span>

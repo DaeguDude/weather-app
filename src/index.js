@@ -20,7 +20,7 @@ function activateSearchCityBtn(error, tempUnit) {
     const cityToFind = getUserInput();
     const unit = tempUnit.getCheckedUnit();
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${cityToFind}&units=${unit}&appid=962edb7f9ab1add3416718398c95a830`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityToFind}&units=${unit}&appid=962edb7f9ab1add3416718398c95a830`
     )
       .then(checkStatus)
       .then(getWeatherJson)

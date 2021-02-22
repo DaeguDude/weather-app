@@ -3,9 +3,11 @@
 A Weather app that's built with Javascript and bundled with webpack. Weather Data is provided
 by [openweather API](https://openweathermap.org/api).
 
-You can use it here on the [page]()
+You can use it here on the [page](https://daegudude.github.io/weather-app/)
 
 ## 🖥 Demo
+
+<img src='weather-gif.gif' alt='weather demo'>
 
 ## 📕 Features
 
@@ -16,7 +18,7 @@ You can use it here on the [page]()
 
 ## 🧑‍🔧 How to use
 
-To use it online, go [here]()
+To use it online, go [here](https://daegudude.github.io/weather-app/)
 
 To run locally, use `npm start`. This runs the app in the development mode.
 Normally it would open automatically, but if it doesn't, click [http://localhost:8080](http://localhost:8080) to view it in your browser.

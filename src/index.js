@@ -1,9 +1,21 @@
+import React from "react";
+import ReactDOM from "react-dom";
 import "./style.css";
 import { checkStatus, getWeatherJson, getPrimaryWeatherInfo } from "./weather";
 import City from "./city";
 import Error from "./error";
 import { resetSearchInput, getUserInput } from "./helper";
 import TempUnit from "./tempUnit";
+import TryReact from "./tryReact";
+
+import App from "./App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector("body")
+);
 
 function startApp() {
   const tempUnit = new TempUnit();

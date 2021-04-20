@@ -17,6 +17,15 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(js|jsx)$/,
+        include: path.resolve(__dirname, "src"),
+        exclude: /(node_modules|bower_components|build)/,
+        use: ["babel-loader"],
+      },
     ],
   },
+  // resolve: {
+  //   extensions: ["*", ".js", ".jsx"],
+  // },
 };

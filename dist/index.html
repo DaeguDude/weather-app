@@ -16,38 +16,14 @@
     <title>🌂Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <header class="header">
-        <h1>WEATHER APP</h1>
-      </header>
-      <section class="weather">
-        <header class="search-box">
-          <form>
-            <input
-              type="text"
-              name="search-city"
-              placeholder="Enter your location"
-            />
-            <button type="submit" class="search-city-btn">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
-        </header>
-        <p class="error">Your location haven't been found!</p>
-        <div class="convert-switch">
-          <label class="switch">
-            <input type="checkbox" />
-            <span class="slider round">
-              <span class="metric metric--checked">C</span>
-              <span class="imperial">F</span>
-            </span>
-          </label>
-        </div>
-        <main>
-          <ul class="cities"></ul>
-        </main>
-      </section>
-    </div>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
 
     <script src="main.js"></script>
   </body>

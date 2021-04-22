@@ -1,43 +1,42 @@
-export default class City {
-  constructor(weatherInfo) {
-    const { name, country, temperature, icon, description } = weatherInfo;
-    this.name = name;
-    this.country = country;
-    this.temperature = temperature;
-    this.icon = icon;
-    this.description = description;
+import React from "react";
+import { toCelsius, toFahrenheit, tryConvert } from "./tempConversion";
 
-    this.elem = null;
-    this.deleteHandler = this.deleteHandler.bind(this);
-  }
+export default function City(props) {
+  const {
+    name,
+    country,
+    temperature,
+    icon,
+    description,
+    scale,
+  } = props.cityInfo;
 
-  render(tempUnit) {
-    const result = document.createRange().createContextualFragment(`
-      <li class="city">
-        <span class="city__name"
-          >${this.name} <sup class="city__country">${this.country}</sup></span
-        >
+  const generalScale = props.scale;
 
-        <div class="city__weather">
-          <span class="degree">${this.temperature}</span>
-          <sup class="unit">°${tempUnit === "metric" ? "C" : "F"}</span>
-        </div>
-        <img class="city__icon" src="https://openweathermap.org/img/wn/${
-          this.icon
-        }@2x.png">
-        <span class="city__info">${this.description}</span>
-        <button class="city__close"><i class="fas fa-times"></i></button>
-      </li>
-    `);
+  const metric =
+    scale === "metric" ? temperature : tryConvert(temperature, toCelsius);
+  const imperial =
+    scale === "imperial" ? temperature : tryConvert(temperature, toFahrenheit);
 
-    this.elem = result.querySelector(".city");
-    result
-      .querySelector(".city__close")
-      .addEventListener("click", this.deleteHandler);
-    return result;
-  }
-
-  deleteHandler() {
-    this.elem.remove();
-  }
+  const imgSrc = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+  return (
+    <li className="city">
+      <span className="city__name">
+        {name}
+        <sup className="city__country">{country}</sup>
+      </span>
+      <div className="city__weather">
+        <span className="degree">
+          {generalScale === "metric" ? metric : imperial}
+        </span>
+        {/* <sup className="unit">°F</sup> */}
+        <sup className="unit">°{generalScale === "metric" ? "C" : "F"}</sup>
+      </div>
+      <img className="city__icon" src={imgSrc} />
+      <span className="city__info">{description}</span>
+      <button className="city__close">
+        <i className="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </li>
+  );
 }

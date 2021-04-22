@@ -11,15 +11,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.querySelector("body")
 );
-
-function startApp() {
-  const error = new Error();
-
-  activateSearchCityBtn(error);
-}
-
-function activateSearchCityBtn(error, tempUnit) {
-  console.log("activateSearchCityBtn");
-}
-
-startApp();
